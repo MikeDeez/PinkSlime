@@ -1,4 +1,4 @@
-@import "variables.styl"
+@import "variables"
 
 *
 	box-sizing border-box
@@ -14,10 +14,11 @@ p, li
 	padding 0 1em
 	
 	h1
+		background brandColor
 		border 1px solid black
 		padding 0.5em
 		font-weight 500
-	
+		
 	@media(max-width medium)
 		max-width 46em
 	@media(max-width large)
@@ -25,6 +26,8 @@ p, li
 	@media(min-width large)
 		max-width 73em
 header
+	background bgColor
+	
 	.container
 		display flex
 		justify-content space-between
