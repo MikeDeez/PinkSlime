@@ -1,13 +1,22 @@
+@import "variables.styl"
+
 *
 	box-sizing border-box
 body
 	margin 0
-	font-family Helvetica, sans-serif
+	font-family "Helvetica Neue", sans-serif
+	font-weight: 300
 p, li
 	line-height 1.5
 .container
+	max-width 1000px
 	margin 0 auto
 	padding 0 1em
+	
+	h1
+		border 1px solid black
+		padding 0.5em
+		font-weight 500
 	
 	@media(max-width medium)
 		max-width 46em
@@ -16,7 +25,6 @@ p, li
 	@media(min-width large)
 		max-width 73em
 header
-	
 	.container
 		display flex
 		justify-content space-between
