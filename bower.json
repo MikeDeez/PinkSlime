@@ -1,9 +1,7 @@
 {
-  "name": "jquerytest2",
+  "name": "",
   "version": "0.0.0",
-  "authors": [
-    "Michael Davies <mykudeez@gmail.com>"
-  ],
+  "authors": [""],
   "license": "MIT",
   "ignore": [
     "**/.*",
