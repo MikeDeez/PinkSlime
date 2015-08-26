@@ -1,0 +1,19 @@
+{
+  "name": "jquerytest2",
+  "version": "0.0.0",
+  "authors": [
+    "Michael Davies <mykudeez@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "font-awesome": "~4.4.0"
+  }
+}
