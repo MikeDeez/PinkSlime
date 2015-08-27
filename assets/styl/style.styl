@@ -2,10 +2,13 @@
 
 *
 	box-sizing border-box
+	-webkit-font-smoothing antialiased
+
 body
 	margin 0
-	font-family "Helvetica Neue", sans-serif
-	font-weight: 300
+	font-family 'PT Sans', sans-serif
+	font-weight 400
+
 p, li
 	line-height 1.5
 .container
@@ -14,10 +17,10 @@ p, li
 	padding 0 1em
 	
 	h1
-		background brandColor
-		border 1px solid black
+		font-family 'PT Sans Narrow', sans-serif
+		color brandColor
 		padding 0.5em
-		font-weight 500
+		font-weight 700
 		
 	@media(max-width medium)
 		max-width 46em
@@ -32,3 +35,19 @@ header
 		display flex
 		justify-content space-between
 		align-items center
+nav
+	ul
+		display flex
+		list-style none
+	
+		li
+			margin-left 2em
+		a
+			text-decoration none
+			color lighten(brandColor, 25%)
+			padding 1em
+	
+			&:hover
+				color lighten(brandColor, 50%)
+				border-bottom 1.5px solid lighten(brandColor, 25%)
+				transition border 0.5s		
