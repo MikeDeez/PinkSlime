@@ -8,6 +8,7 @@ body
 	margin 0
 	font-family contentFont
 	font-weight 700
+	background-image url('../images/burger.gif')
 
 p, li
 	line-height 1.5
@@ -30,8 +31,6 @@ p, li
 	@media(min-width large)
 		max-width 73em
 header
-	background bgColor
-	
 	.container
 		display flex
 		justify-content space-between
@@ -53,12 +52,7 @@ nav
 				color lighten(fgColor, 50%)
 				transition color 0.5s
 
-.jumbotron
-	width 100%
-	height 600px
-	background brandColor
-	font-style italic
-	
+.container
 	.wrapper
 		display flex
 		align-items center
