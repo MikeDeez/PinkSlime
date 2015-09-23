@@ -1,13 +1,22 @@
-var gulp         = require('gulp');                   	    // the main guy
-var clone        = require('gulp-clone');                  // used to fork a stream
-var rename       = require('gulp-rename');                // rename files in a stream
-var stylus       = require('gulp-stylus');               // turn stylus code into css
-var plumber      = require('gulp-plumber');             // handle errors
-var beautify     = require('gulp-cssbeautify');    	   // make files human readable
-var sourcemap    = require('gulp-sourcemaps');    	  // write sourcemaps
-var minifycss    = require('gulp-minify-css');  	 // minify css code
-var autoprefix   = require('gulp-autoprefixer');	// prefix any css with low support
+var gulp         = require('gulp');                   	          // Gulp
+var clone        = require('gulp-clone');                        // used to fork a stream
+var rename       = require('gulp-rename');                      // rename files in a stream
+var stylus       = require('gulp-stylus');                     // turn stylus code into css
+var plumber      = require('gulp-plumber');                   // handle errors
+var beautify     = require('gulp-cssbeautify');    	   	     // make files human readable
+var sourcemap    = require('gulp-sourcemaps');    	  	    // write sourcemaps
+var minifycss    = require('gulp-minify-css');  	 	   // minify css code
+var autoprefix   = require('gulp-autoprefixer');		  // prefix any css with low support
+var combinemq    = require('gulp-combine-media-queries') // Adds Media Queries to the bottom
 
+var paths = {
+	stylus: ['assets/styl/style.styl'],
+	output: 'assets/css/'
+}
+
+var plumberOpts = {
+	errorHandler: notify.onError("Error: <%= error.message %>")
+}
 
 gulp.task('css', function(){
 	// prepare css code
