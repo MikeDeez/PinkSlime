@@ -1,5 +1,5 @@
 var gulp         = require('gulp');                   	            // Gulp
-var notify       = require('gulp-notify')             			   // OS-level notifications
+var notify       = require('gulp-notify');	             		   // OS-level notifications
 var clone        = require('gulp-clone');                         // used to fork a stream
 var rename       = require('gulp-rename');                       // rename files in a stream
 var stylus       = require('gulp-stylus');                      // turn stylus code into css
