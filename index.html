@@ -2,30 +2,72 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>p i n k\\s l i m e</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>pinkslime - burger finder</title>
+	<link rel="icon" type="image/png" href="images/favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/css/twemoji-awesome.css">
 	<link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 <body>
-	<header>
-		<div class="container">
-			<div class="logo">
-				<h1>pink slime</h1>
-			</div>
-
+	<div class="container">
+		<header>
 			<div class="logo-bar">
-				<h2>fsdfsdfs</h2>
+				<div class="logo">
+					<h1>pink slime</h1>
+					<h5><i class="twa twa-hamburger twa-2x"></i> finder</h5>
+				</div>
+				<div class="bar-btm">
+					<h2>You are near <span id="location"></span>.</h2>
+					<h2>Weather is <span id="currentwht"></span>, <span id="currenttmp"></span>&#176;C</h2>
+				</div>
 			</div>
-		</div>
-	</header>
+		</header>
+		
+		<div class="location-container">
+		        <div class="preloader-container">
+		            <div id="preloader">
+		            	<h1> <i class="twa twa-mag twa-lrg"></i> Searching...</h1>
+		            	<h2>Please allow location sharing on your device to enable Geolocation to locate nearby burger places</h2>
+
+		            	<h2><i class="twa twa-bangbang twa-lrg"></i>If it takes longer than 5 seconds, then there aren't any burger places within a 2km radius</h2>
+		            </div>
+		        </div>
+	
+	
+			<!-- <div class="noresults-container">
+		            <div id="no-results">
+		            	<h1> <i class="twa twa-no-good twa-lrg"></i> No Results</h1>
+		            	<h2>Location you are in is not within 2km of any burger places</h2>
+		            </div>
+		        </div>  -->
 
 
-	<div class="geoloc-container">
-		<div class="wrapper">
-			<h1>..find your meal..</h1>
+			<script id="location-template" type="text/x-handlebars-template">
+				<div>
+					<a id="location-link" target='_blank' href="http://maps.google.com/maps?saddr=My+Location&daddr={{burgerlat}},{{burgerlng}}&dirflg=w">
+						<div class="location-results">
+								<div id="results">
+									<h1>{{locationtitle}}</h1>
+									<h2>{{locationstreet}}</h2>
+									<div id="location-rating">
+										<span id="face"></span>
+										<span id="location-rating-no">{{locationrating}}</span> / 10
+									</div>
+									<div id="location-distance">
+										{{locationdistance}}M
+										<i class="twa twa-arrow-right twa-lrg"></i>
+									</div>	
+								</div>					 
+						</div>
+					</a>
+				</div>	
+			</script>
 		</div>
 	</div>
-
+	
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/handlebars/handlebars.min.js"></script>
+	<script src="assets/js/script.js"></script>
 </body>
 </html>

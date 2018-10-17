@@ -5,33 +5,18 @@
 	-webkit-font-smoothing antialiased
 
 body
-	margin 0
 	font-family contentFont
 	font-weight 700
-	background-image url('../images/burger.gif') 
-	background-size 120px
+	background-image url('../images/burger.png') 
+	background-size 140px
 	width 100%
 	height auto
-body:before
-	content ""
-	position fixed
-	width 200%
-	height 200%
-	top -50%
-	left -50%
-	z-index -1
-	background url('../images/burger.gif')
-	transform rotate(-30deg)
 p, li
 	line-height 1.5
 .container
 	max-width 960px
 	margin 0 auto
 	padding 1em
-	
-	h1
-		font-family titleFont
-		font-weight 700
 		
 	@media(max-width medium)
 		max-width 46em
@@ -39,75 +24,88 @@ p, li
 		max-width 60em
 	@media(min-width large)
 		max-width 73em
-header
-	.container
-		display flex
-		position relative
+		
+	@media(min-width small)
 		flex-direction column
-		align-items flex-start
-		justify-content flex-start
-.logo
+		max-width small
+header
 	display flex
+	flex-direction row
+	padding-left 5em
+
+.logo-bar
 	position fixed
+	.logo
+		padding 1em
+
+		background brandColor
+		color bgColor
+		font-size 1.5em
+		
+		h1
+			font-family titleFont
+			font-weight 700
+			letter-spacing 2px
+	.bar-btm
+		padding 1em
+		width 244px
+
+		background bgColor
+		color fgColor
+		
+	@media(max-width small)
+		display flex
+		position static
+.location-container
+	display flex
+	flex-direction column
 	
-	padding 1em
-	margin 1em
+	max-width 960px
+	padding-left 25em
+.preloader-container, 
+.noresults-container
+	width 500px
+	background rgba(bgColor, 95%)
 	
+	#preloader, #no-results
+		padding 3em
+		h1
+			letter-spacing 1.5px
+		h2
+			letter-spacing 1px	
+#location-link
+	display block
+	text-decoration none
+a#location-link
+	width 400px
+	height auto
+.location-results
+	display flex
+	background rgba(bgColor, 95%)
+	color fgColor
+	
+	margin-bottom 1.5em
+	width 500px
+	
+	@media(min-width small)
+		flex 1
+.location-results:hover
+	transition background-color 1s
 	background brandColor
 	color bgColor
-	font-size 1.5em
-	letter-spacing 2px
-	
-.logo-bar
-	display flex
-	position fixed
-	top 209px
-	left 95px
-
+#results
 	padding 1em
-	width 244px
+	h1
+		letter-spacing 1.5px
+	h2
+		letter-spacing 1px
 
-	background bgColor
-	color fgColor
-	letter-spacing 1px
-
-.geoloc-container
+#location-distance
 	display flex
-	margin-top 0.5em
-	margin-left 5em
-	font-family contentFont
-	align-items center
-	justify-content space-around
-	text-align center
+	padding-left 25em
+	margin-top -1.7em
+#arrow, 
+#norating, 
+#face
+	font-size 24px
 
-	.wrapper
-		background brandColor
-		width 500px
-		color bgColor
-/* Hover Effect */
-
-// .hvr-line
-// 	display inline-block
-// 	vertical-align middle
-// 	-webkit-transform translateZ(0)
-// 	transform translateZ(0)
-// 	box-shadow 0 0 1px rgba(0, 0, 0, 0)
-// 	backface-visibility hidden
-// 	position relative
-// 	overflow hidden
-
-// .hvr-line:before 
-// 	content ""
-// 	position absolute
-// 	z-index -1
-// 	left 0
-// 	right 100%
-// 	bottom 0
-// 	background lighten(brandColor, 30%)
-// 	height 3px
-// 	transition-property right
-// 	transition-duration 0.33s
-// 	transition-timing-function ease-out
-
-// .hvr-line:hover:before, .hvr-line:focus:before, .hvr-line:active:before
-// 	right 0
