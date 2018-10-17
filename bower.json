@@ -1,7 +1,9 @@
 {
-  "name": "",
+  "name": "bowser",
   "version": "0.0.0",
-  "authors": [""],
+  "authors": [
+    ""
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -11,7 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
-    "font-awesome": "~4.4.0"
+    "handlebars": "~4.0.3",
+    "jquery": "~2.1.4"
   }
 }
